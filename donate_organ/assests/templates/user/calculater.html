@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+  <title>Organ Donation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+  
+  <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}">
+
+
+  <link rel="stylesheet" href="{% static 'main/css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/jquery.timepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'main/css/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<script type="text/javascript">
+  function validation() {
+    var email = document.myform.email;
+    var password = document.myform.password;
+
+  if (email.value == "") {
+  alert('Please enter your email')
+  email.focus();
+  return false;
+  }
+  if (password.value == "") {
+  alert('Please enter your password')
+  password.focus();
+  return false;
+  }
+  }
+</script>
+<body>
+
+  <div class="wrap">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-6 d-flex align-items-center">
+      <p class="mb-0 phone pl-md-2">
+       <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +91 9492494922</a> 
+       <a href="#"><span class="fa fa-paper-plane mr-1"></span>info@EDUGENE.in</a>
+     </p>
+   </div>
+   <div class="col-md-6 d-flex justify-content-md-end">
+    <div class="social-media">
+     <p class="mb-0 d-flex">
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+ <div class="container">
+   <a class="navbar-brand" href="index.html">ORGAN DONATION</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="oi oi-menu"></span> Menu
+   </button>
+
+   <div class="collapse navbar-collapse" id="ftco-nav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a href="{% url 'main_home' %}" class="nav-link">Home</a></li>
+      <li class="nav-item active"><a href="{% url 'main_user' %}" class="nav-link">User</a></li>
+      <li class="nav-item"><a href="{% url 'main_admin' %}" class="nav-link">Admin</a></li>
+      <li class="nav-item"><a href="{% url 'main_hospital' %}" class="nav-link">Hospital</a></li>
+      <li class="nav-item"><a href="{% url 'main_contact' %}" class="nav-link">Contact</a></li>
+      <li class="nav-item "><a href="{% url 'main_about' %}" class="nav-link">About Us</a></li>
+    </ul>
+  </div>
+ </div>
+</nav>
+<!-- END nav -->
+
+ <section class="hero-wrap hero-wrap-2" style="background-image: url('https://www.kokilabenhospital.com/blog/wp-content/uploads/2020/08/World-Organ-Donation-Day-Blog-.png'); height: 450px;" data-stellar-background-ratio="0.5">  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end">
+      <div class="col-md-9 ftco-animate pb-5">
+       <h1 class="mb-0 bread">User Login</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img">
+    <div class="overlay"></div>
+    <div class="container" style="background-color: antiquewhite;">
+      
+            
+            <div class="col-md-12 mt-3">
+                <center>
+                <div class="col-md-6 py-5 " >
+                    <div class="donation-wrap mt-1">
+                        
+                        <form method="post" name="myform" enctype="multipart/form-data"  class="appointment" >
+                          {% csrf_token %}
+                            <div class="row py-3">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="name">first number</label>
+                                        <div class="input-wrap">
+                                            <div class="icon"><span class="fa fa-user"></span></div>
+                                            <input type="text" name="num1" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="name">second number</label>
+                                        <div class="input-wrap">
+                                            <div class="icon"><span class="fa fa-paper-plane"></span></div>
+                                            <input type="text" name="num2" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="name">select symbol</label>
+                                        <select name="res" class="form-control">
+                                            <option value="+">+</option>
+                                            <option value="-">-</option>
+                                            <option value="/">/</option>
+                                            <option value="%">%</option>
+                                            <option value="*">*</option>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="name">Result</label>
+                                        <div class="input-wrap">
+                                            <div class="icon"><span class="fa fa-paper-plane"></span></div>
+                                            <input type="text" name="" value="{{res}}" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group mt-4">
+                                    <button type="submit" value="" class="btn btn-secondary py-3 px-4" style="width: 200px;"> calculator</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </center>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+ <div class="container">
+  <div class="row">
+   <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">ORGAN DONATION.</h2>
+    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    <ul class="ftco-footer-social p-0">
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+    </ul>
+    <p><a href="#" class="btn btn-quarternary">Donate Now</a></p>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">Latest News</h2>
+    <div class="block-21 mb-4 d-flex">
+      <div class="text">
+        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+        <div class="meta">
+          <div><a href="#">Jul 20, 2020</a></div>
+          <div><a href="#">Admin</a></div>
+          <div><a href="#">19</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="block-21 mb-4 d-flex">
+      <div class="text">
+        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+        <div class="meta">
+          <div><a href="#">Jul 20, 2020</a></div>
+          <div><a href="#">Admin</a></div>
+          <div><a href="#">19</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+    <h2 class="footer-heading">Quick Links</h2>
+    <ul class="list-unstyled">
+      <li><a href="{% url 'main_home' %}" class="py-2 d-block">Home</a></li>
+      <li><a href="{% url 'main_user' %}" class="py-2 d-block">User</a></li>
+      <li><a href="{% url 'main_admin' %}" class="py-2 d-block">Admin</a></li>
+      <li><a href="{% url 'main_hospital' %}" class="py-2 d-block">Hospital</a></li>
+      <li><a href="{% url 'main_contact' %}" class="py-2 d-block">Contact</a></li>
+      <li><a href="{% url 'main_about' %}" class="py-2 d-block">About Us</a></li>
+    </ul>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">Have a Questions?</h2>
+    <div class="block-23 mb-3">
+      <ul>
+        <li><span class="icon fa fa-map"></span><span class="text">Hyderabad, Telangana 500074</span></li>
+        <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 9492494922</span></a></li>
+        <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@EDUGENE.in</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-md-12 text-center">
+
+    <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      <a href="https://www.EDUGENE.in/" target="_blank">EDUGENE</a>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Fz!NFOTECH</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="{% static 'main/js/jquery.min.js' %}"></script>
+		<script src="{% static 'main/js/jquery-migrate-3.0.1.min.js' %}"></script>
+		<script src="{% static 'main/js/popper.min.js' %}"></script>
+		<script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'main/js/jquery.easing.1.3.js' %}"></script>
+		<script src="{% static 'main/js/jquery.waypoints.min.js' %}"></script>
+		<script src="{% static 'main/js/jquery.stellar.min.js' %}"></script>
+		<script src="{% static 'main/js/jquery.animateNumber.min.js' %}"></script>
+		<script src="{% static 'main/js/bootstrap-datepicker.js' %}"></script>
+		<script src="{% static 'main/js/jquery.timepicker.min.js' %}"></script>
+		<script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'main/js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'main/js/scrollax.min.js' %}"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		<script src="{% static 'main/js/google-map.js' %}"></script>
+		<script src="{% static 'main/js/main.js' %}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {% if messages %}              
+          {% for message in messages %}
+             {% if message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                       <script>swal({
+                         title: "Warning!",
+                         text: "{{message}}",
+                         icon: "warning",
+                         button: "OK",
+                       });
+                     </script>
+                  
+                   {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                       <script>swal({
+                         title: "Info :)",
+                         text: "{{message}}",
+                         icon: "info",
+                         button: "OK",
+                       });
+             </script>
+             {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+             <script>swal({
+               title: "Error :)",
+               text: "{{message}}",
+               icon: "error",
+               button: "OK",
+             });
+             </script>
+             {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+             <script>swal({
+             title: "Success :)",
+             text: "{{message}}",
+             icon: "success",
+             button: "OK",
+             });
+             </script>
+                   {% endif %}              
+                 {% endfor %} 
+             {% endif %}
+</body>
+</html>
